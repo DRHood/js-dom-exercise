@@ -16,7 +16,7 @@ button.addEventListener('click', changeColor);
 
 // generate squares
 function genSquares() {
-    for(let i = 0; i < 20; i++) {
+    for(let i = 0; i < 8000; i++) {
         let square = document.createElement("div");
         square.innerHTML = "<div class=\"square\"></div>";
         document.body.appendChild(square); 
@@ -29,9 +29,9 @@ let squ = document.querySelectorAll('.square');
 
 let clicked = document.querySelectorAll('.square');
 for (let i = 0; i < clicked.length; i++) {    
-    clicked[i].addEventListener('click', ((j) => {         
+    clicked[i].addEventListener('mouseover', ((j) => {         
     return function() {
-        squ[j].style.background = "green";
+        squ[j].style.background = colorVal();
     }
   })(i))
 }
