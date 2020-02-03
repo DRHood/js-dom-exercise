@@ -12,3 +12,12 @@ const colorVal = function() {
     return inputVal;
 }
 button.addEventListener('click', changeColor);
+
+function genSquares() {
+    for(i = 0; i < 20; i++) {
+        let square = document.createElement("div");
+        square.innerHTML = "<div class=\"square\"></div>";
+        document.body.appendChild(square); 
+    }
+}
+genSquares()
